@@ -65,7 +65,7 @@ window.alert("GoodNight World");
 ### JS Variables
 
 - Variables are containers for storing data values.
-- It behaves as it was the value that it contains.
+- It behaves as if it was the value that it contains.
 - Variables are case sensitive.
 - Variables can be declared and assigned values.  
   **_Variable Declaration_**
@@ -92,7 +92,7 @@ students -= 1;
 students = students * 2;
 students *= 1;
 students = students / 2;
-students 1= 1; // (Augmented operators)
+students /= 1; // (Augmented operators)
 // console.log(students);
 
 let students = 20;
