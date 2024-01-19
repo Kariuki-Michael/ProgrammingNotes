@@ -230,3 +230,181 @@ switch (expression) {
 - The `>=` operator (greater than or equal to) compares two values.
 - The `<` operator (less than) compares two values.
 - The `<=` operator (less than or equal to) compares two values.
+
+### While Loop
+
+- Like an if statement except it repeats some code while some condition is true.
+- Could Potentially run infinitely.
+
+```js
+while (condition == true / false) {
+  //execution code
+}
+```
+
+### Do While Loop
+
+- Variation of the while loop.
+- Do something, then check the condition, repeat if it is true.
+
+```js
+do {
+  //code
+} while ((condition = true / false));
+{
+  //execution
+}
+```
+
+### For Loops
+
+- Repeats some code a certain amount of times
+- Better when you want code to repeat a specified number of times.
+
+```js
+for (i = 0; i <= 10; i++) {
+  console.log(i);
+}
+```
+
+### Break & Continue Statement
+
+**Break**
+
+- Breaks out of a loop entirely.
+
+```js
+for (i = 1; i <= 20; i += 1) {
+  if (i == 13) {
+    continue;
+    break;
+  }
+  console.log(i);
+}
+```
+
+**Continue**
+
+- Skips an iteration of a loop.
+
+### Nested Loops
+
+- These is a loop inside another loop
+- Use different counters.
+
+### Functions
+
+- Define code once, use it as many times as possible.
+- Call function name to execute a code.
+- Two phones calling on another.
+
+```js
+function fName(Parameters) {
+  //Executable code
+}
+```
+
+### Return Statement
+
+- Returns a value back to the place where you invoked a function.
+
+```js
+function areaCalc(width, height) {
+  let result = width * height;
+  return result;
+}
+```
+
+### Ternary Operator
+
+- Shortcut for if/else statement
+- Takes three operands.
+  - a condition with ?
+  - expression if True :
+  - expression if False
+
+```js
+// condition ? expreIfTrue : exprifFalse;
+win ? console.log("Winneer") : console.log("Looser");
+```
+
+### Let & Var Keywords Differences
+
+- Variable scobe is where the variable is accessible
+- let => variables are limited to block scope
+- var => variables are limited to a function().
+- global variables are declared outside any function.
+
+### Tempalate Literals
+
+- delimited with (``) instead of double or single quotes.
+- Allows variables and expressions
+- Helpful when updating an HTML file with some text.
+
+```js
+let userName = "Bro";
+let item = 3;
+let total = 75;
+
+console.log(
+  `Hello ${userName} you have ${item} items in your cart. Your total is ${total} USD`
+);
+```
+
+### Arrays
+
+- Think of it as a variable that can store multiple values.
+- Each value within an array is also known as an element.
+
+```js
+let fruit = ["apple", "orange", "banana"];
+// Accessing the index of an array
+console.log(fruit[0]);
+// Output will be apple
+
+// Changing an element within an arrray
+fruits[0] = "coconut";
+// new output will be coconut, orange, banana.
+
+// Adding elements to an array. Use the .push() method.
+fruit.push("lemon");
+
+//Removing the last element. Use the .pop() method.
+fruit.pop();
+
+// Add Element to the beginning of an array. Use the .unshift() method
+fruit.unshift("mango");
+
+// Removing beginning element. Use the .shift() method.
+fruit.shift();
+
+// Accessing length property of an array.
+let length = fruit.length;
+
+// Find position of an element.
+let index = fruit.indexOf("apple");
+```
+
+### Looping through an array
+
+- Standard for loop
+- For up statement
+
+```js
+let prices = [5, 10, 15, 20];
+
+for (let i = 0; i < prices.length; i++) {
+  consol.log(prices[i]);
+}
+// Iterate backwards
+for (let i = prices.length - 1; i >= 0; i--) {
+  console.log(prices[i]);
+}
+
+// For Up Statement.
+for (let price of prices) {
+  console.log(price);
+}
+```
+
+### Sorting an Array Of Strings.

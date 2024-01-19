@@ -44,25 +44,32 @@
 //     }
 // }
 
-let grade = prompt("Enter your grade");
+// let grade = prompt("Enter your grade");
 
-switch(grade) {
-    case "A":
-        console.log("You got an A");
-        break;
-    case "B":
-        console.log("You got a B");
-        break;
-    case "C":
-        console.log("You got a C");
-        break;
-    case "D":
-        console.log("You got a D");
-        break;
-    case "F":
-        console.log("You got an F");
-        break;
-    default:
-        console.log("You did not enter a valid grade");
-        break;
-}
+// switch(grade) {
+//     case "A":
+//         console.log("You got an A");
+//         break;
+//     case "B":
+//         console.log("You got a B");
+//         break;
+//     case "C":
+//         console.log("You got a C");
+//         break;
+//     case "D":
+//         console.log("You got a D");
+//         break;
+//     case "F":
+//         console.log("You got an F");
+//         break;
+//     default:
+//         console.log("You did not enter a valid grade");
+//         break;
+// }
+
+// let userName = "Bro";
+// let item = 3;
+// let total =75;
+// let txt = `Hello ${userName} you have ${item} items in your cart. Your total is ${total} USD`;
+// //console.log(`Hello ${userName} you have ${item} items in your cart. Your total is ${total} USD`);
+// document.getElementById('h1txt').innerHTML = txt;
