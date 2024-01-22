@@ -408,3 +408,248 @@ for (let price of prices) {
 ```
 
 ### Sorting an Array Of Strings.
+
+```js
+let fruits = ["banana", "apple", "orange", "mango"];
+// Alphabetical order
+fruits = fruits.sort();
+
+// Reverse alphabetical order
+fruits = fruits.sort().reverse();
+
+// No Specific order
+for (let fruit in fruits) {
+  console.log(fruit);
+}
+```
+
+### 2D Arrays/ MultiDimensional Arrrays
+
+- It's an array made up of arrays.
+
+```js
+let fruits = ["mangos", "apples", "oranges", "bananas"];
+let veggies = ["tomatoes", "carrots", "cabbages"];
+let meat = ["chicken", "pork", "beaf"];
+
+let groceryList = [fruits, veggies, meat];
+
+// Accessing individual items
+groceryList[1][0];
+// Output is tomatoes.
+
+for (let list of groceryList) {
+  for (let item of list) {
+    console.log(item);
+  }
+}
+```
+
+### Spread Operator
+
+- Allows an iterable such as an array or string to be expanded in places where zero or more argumnts are expected. (unpacks the element into individual arguments).
+- Just like opening a box and taking out whatever is inside.
+- Could be useful when finding the maximum value of an array.
+
+```js
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(...numbers);
+// Output 1 2 3 4 5 6 7 8 9
+let maximum = Math.max(...numbers);
+console.log(maximumu);
+// Output 9
+```
+
+### Rest Parameters
+
+- Represent an indefinite number of parameters. (packs arguments into an arry).
+
+```js
+function sum(...numbers) {
+  let total = 0;
+  for (let number of numbers) {
+    total += number;
+  }
+  return total;
+}
+```
+
+### Callback
+
+- A function passed as an argument to another function.
+- Ensures that a function is not going to run before a task is completed.
+- It helps develop asynchronous code.
+- Avoid adding an additional set of parentheses.
+
+```js
+sum(2, 3, displayConsole);
+
+function sum(x, y, callback) {
+  let result = x + y;
+  callback(result);
+}
+
+function displayConsole(output) {
+  console.log(output);
+}
+function displayDOM(output) {
+  document.getElementbyID("0").INNERHTML = output;
+}
+```
+
+### array.forEach()
+
+- Executes a provided callback function once for each array element.
+
+```js
+let students = ["spongebob", "patrick", "squidward"];
+students.forEach(capitalize);
+students.forEach(print);
+
+function capitalize(array, element, index) {
+  array[index] = element[0].toUppercase() + element.substring(1);
+}
+function print(element) {
+  console.log(element);
+}
+console.log(students[0]);
+```
+
+### array.map()
+
+- Executes a provided callback function once for each array element and creates a new array.
+
+```js
+let numbers = [1, 2, 3, 4, 5, 6];
+
+let squares = numbers.map(square);
+sqaures.forEach(print);
+
+let cubes = numbers.map(cube);
+cubes.forEach(print);
+
+function cube(element) {
+  return Math.pow(element, 3);
+}
+function square(element) {
+  return Math.pow(element, 2);
+}
+function print(element) {
+  console.log(element);
+}
+```
+
+### array.filter()
+
+- Creates a new array with all elements that pass the test provided by a function.
+
+```js
+let ages = [12, 34, 56, 9, 17];
+let adults = ages.filter(checkAge);
+adults.forEach(print);
+
+function checkAge(element) {
+  return element >= 18;
+}
+function print(element) {
+  console.log(element);
+}
+```
+
+### array.reduce()
+
+- Reduces an array to a single value.
+- Great use for the method is to sum up an array of value e.g. items in a shopping cart.
+
+```js
+let prices = [45, 50, 78, 120, 45];
+let total = prices.reduce(checkOut);
+console.log(total);
+function checkOut(total, element) {
+  return total + element;
+}
+```
+
+### Sorting an array of numbers
+
+```js
+let grades = [100, 50, 87, 42, 90];
+grades = grades.sort(descendingSort);
+grades = grades.sort(ascendingSort);
+grades.forEach(print);
+
+function descendingSort(x, y) {
+  return y - x;
+}
+function ascendingSort(x, y) {
+  return x - y;
+}
+function print(element) {
+  console.log(element);
+}
+```
+
+### function expressions
+
+- Refers to a function without a name (anonymous function)
+- Helps to avoid polluting the global scope with names.
+
+```js
+const greeting = function () {
+  console.log("hello");
+};
+greeting();
+```
+
+### Arrow function
+
+- Compact alternative to a traditional function
+
+```js
+const greeting = (userName) => console.log(`Hello ${userName}`);
+```
+
+### Shufffling elements of arrays
+
+```js
+let cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "K", "Q", "J"];
+shuffle(cards);
+
+cards.forEach((card) => console.log(card));
+function shuffle(array) {
+  let currentIndex = array.length;
+
+  while (currentIndex != 0) {
+    let randomIndex = Math.floor(Math.random() * array.length);
+    currentIndex -= 1;
+
+    let temp = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temp;
+  }
+  return array;
+}
+```
+
+### Nested functions
+
+- Functions inside other functions
+
+```js
+let userName = "Code";
+let userInbox = 0;
+
+login();
+
+function logIn() {
+  displayUsername();
+  displayuserInbox();
+
+  function displayUsername() {
+    console.log(`Welcome ${userName}`);
+  }
+  function displayuserInbox() {
+    console.log(`You have ${userInbox} new messages`);
+  }
+}
+```
